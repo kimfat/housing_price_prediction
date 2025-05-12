@@ -1,0 +1,93 @@
+2025-05-12 19:41:54,989 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 19:41:54,990 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-12 19:41:54,991 - INFO -  * Restarting with stat
+2025-05-12 19:41:55,318 - WARNING -  * Debugger is active!
+2025-05-12 19:41:55,326 - INFO -  * Debugger PIN: 152-754-368
+2025-05-12 19:42:03,335 - INFO - Запрос на цену: 42.0 кв.м = 12600000.0 руб.
+2025-05-12 19:42:03,335 - INFO - 127.0.0.1 - - [12/May/2025 19:42:03] "GET /price?sqm=42 HTTP/1.1" 200 -
+2025-05-12 19:42:03,421 - INFO - 127.0.0.1 - - [12/May/2025 19:42:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-12 19:42:09,719 - INFO - 127.0.0.1 - - [12/May/2025 19:42:09] "[33mGET / HTTP/1.1[0m" 404 -
+2025-05-12 19:46:19,713 - INFO -  * Detected change in 'c:\\Users\\fazlu\\jupyter\\study\\padb\\housing_price_prediction\\service\\api.py', reloading
+2025-05-12 19:46:19,754 - INFO -  * Restarting with stat
+2025-05-12 19:46:20,128 - WARNING -  * Debugger is active!
+2025-05-12 19:46:20,133 - INFO -  * Debugger PIN: 152-754-368
+2025-05-12 19:46:23,058 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 19:46:23,058 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-12 19:46:23,060 - INFO -  * Restarting with stat
+2025-05-12 19:46:23,390 - WARNING -  * Debugger is active!
+2025-05-12 19:46:23,395 - INFO -  * Debugger PIN: 152-754-368
+2025-05-12 19:46:30,730 - INFO - 127.0.0.1 - - [12/May/2025 19:46:30] "GET / HTTP/1.1" 200 -
+2025-05-12 19:46:35,663 - INFO - Расчет стоимости: 32.0 кв.м \u2192 9600000.0 руб.
+2025-05-12 19:46:35,674 - INFO - 127.0.0.1 - - [12/May/2025 19:46:35] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2025-05-12 19:46:35,787 - INFO - 127.0.0.1 - - [12/May/2025 19:46:35] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-05-12 19:46:36,067 - INFO - 127.0.0.1 - - [12/May/2025 19:46:36] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-05-12 19:46:36,431 - INFO - 127.0.0.1 - - [12/May/2025 19:46:36] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=G5vRNGIhxD4hO7vxmTJY HTTP/1.1" 200 -
+2025-05-12 19:46:36,677 - INFO - 127.0.0.1 - - [12/May/2025 19:46:36] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-05-12 19:47:11,196 - INFO -  * Detected change in 'c:\\Users\\fazlu\\jupyter\\study\\padb\\housing_price_prediction\\service\\api.py', reloading
+2025-05-12 19:47:11,241 - INFO -  * Restarting with stat
+2025-05-12 19:47:11,558 - WARNING -  * Debugger is active!
+2025-05-12 19:47:11,563 - INFO -  * Debugger PIN: 152-754-368
+2025-05-12 19:47:14,628 - INFO -  * Detected change in 'c:\\Users\\fazlu\\jupyter\\study\\padb\\housing_price_prediction\\service\\api.py', reloading
+2025-05-12 19:47:14,682 - INFO -  * Restarting with stat
+2025-05-12 19:47:15,103 - WARNING -  * Debugger is active!
+2025-05-12 19:47:15,109 - INFO -  * Debugger PIN: 152-754-368
+2025-05-12 19:48:56,599 - INFO -  * Detected change in 'c:\\Users\\fazlu\\jupyter\\study\\padb\\housing_price_prediction\\service\\api.py', reloading
+2025-05-12 19:48:56,642 - INFO -  * Restarting with stat
+2025-05-12 19:48:56,997 - WARNING -  * Debugger is active!
+2025-05-12 19:48:57,002 - INFO -  * Debugger PIN: 152-754-368
+2025-05-12 19:49:07,188 - INFO -  * Detected change in 'c:\\Users\\fazlu\\jupyter\\study\\padb\\housing_price_prediction\\service\\api.py', reloading
+2025-05-12 19:49:07,217 - INFO -  * Restarting with stat
+2025-05-12 19:49:07,529 - WARNING -  * Debugger is active!
+2025-05-12 19:49:07,535 - INFO -  * Debugger PIN: 152-754-368
+2025-05-12 19:49:08,590 - INFO -  * Detected change in 'c:\\Users\\fazlu\\jupyter\\study\\padb\\housing_price_prediction\\service\\api.py', reloading
+2025-05-12 19:49:08,629 - INFO -  * Restarting with stat
+2025-05-12 19:49:08,942 - WARNING -  * Debugger is active!
+2025-05-12 19:49:08,946 - INFO -  * Debugger PIN: 152-754-368
+2025-05-12 19:49:09,987 - INFO -  * Detected change in 'c:\\Users\\fazlu\\jupyter\\study\\padb\\housing_price_prediction\\service\\api.py', reloading
+2025-05-12 19:49:10,017 - INFO -  * Restarting with stat
+2025-05-12 19:49:10,344 - WARNING -  * Debugger is active!
+2025-05-12 19:49:10,349 - INFO -  * Debugger PIN: 152-754-368
+2025-05-12 19:49:37,877 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 19:49:37,878 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-12 19:49:37,879 - INFO -  * Restarting with stat
+2025-05-12 19:49:38,201 - WARNING -  * Debugger is active!
+2025-05-12 19:49:38,205 - INFO -  * Debugger PIN: 152-754-368
+2025-05-12 19:49:44,150 - INFO - 127.0.0.1 - - [12/May/2025 19:49:44] "GET / HTTP/1.1" 200 -
+2025-05-12 19:49:46,127 - INFO - Расчет стоимости: 122.0 кв.м \u2192 36600000.0 руб.
+2025-05-12 19:49:46,129 - INFO - 127.0.0.1 - - [12/May/2025 19:49:46] "POST / HTTP/1.1" 200 -
+2025-05-12 19:50:14,066 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 19:50:14,066 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-12 19:50:14,067 - INFO -  * Restarting with stat
+2025-05-12 19:50:14,388 - WARNING -  * Debugger is active!
+2025-05-12 19:50:14,393 - INFO -  * Debugger PIN: 152-754-368
+2025-05-12 19:50:19,997 - INFO - Расчет стоимости: 12.0 кв.м \u2192 3600000.0 руб.
+2025-05-12 19:50:20,010 - INFO - 127.0.0.1 - - [12/May/2025 19:50:20] "POST / HTTP/1.1" 200 -
+2025-05-12 19:50:22,048 - INFO - Расчет стоимости: 23123.0 кв.м \u2192 6936900000.0 руб.
+2025-05-12 19:50:22,049 - INFO - 127.0.0.1 - - [12/May/2025 19:50:22] "POST / HTTP/1.1" 200 -
+2025-05-12 19:50:48,206 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 19:50:48,206 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-12 19:50:48,208 - INFO -  * Restarting with stat
+2025-05-12 19:50:48,559 - WARNING -  * Debugger is active!
+2025-05-12 19:50:48,566 - INFO -  * Debugger PIN: 152-754-368
+2025-05-12 19:50:51,159 - INFO - Расчет стоимости: 12.0 кв.м \u2192 3600000.0 руб.
+2025-05-12 19:50:51,187 - INFO - 127.0.0.1 - - [12/May/2025 19:50:51] "POST / HTTP/1.1" 200 -
+2025-05-12 19:51:40,923 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 19:51:40,923 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-12 19:51:40,924 - INFO -  * Restarting with stat
+2025-05-12 19:51:41,246 - WARNING -  * Debugger is active!
+2025-05-12 19:51:41,252 - INFO -  * Debugger PIN: 152-754-368
+2025-05-12 19:51:46,155 - INFO - 127.0.0.1 - - [12/May/2025 19:51:46] "GET / HTTP/1.1" 200 -
+2025-05-12 19:51:48,242 - INFO - Расчет стоимости: 123.0 кв.м \u2192 36900000.0 руб.
+2025-05-12 19:51:48,242 - INFO - 127.0.0.1 - - [12/May/2025 19:51:48] "POST / HTTP/1.1" 200 -
+2025-05-12 19:52:38,250 - INFO -  * Detected change in 'c:\\Users\\fazlu\\jupyter\\study\\padb\\housing_price_prediction\\service\\api.py', reloading
+2025-05-12 19:52:38,288 - INFO -  * Restarting with stat
+2025-05-12 19:52:38,668 - WARNING -  * Debugger is active!
+2025-05-12 19:52:38,673 - INFO -  * Debugger PIN: 152-754-368
+2025-05-12 19:52:50,218 - INFO - Расчет стоимости: 123.0 кв.м \u2192 36900000 руб.
+2025-05-12 19:52:50,226 - INFO - 127.0.0.1 - - [12/May/2025 19:52:50] "POST / HTTP/1.1" 200 -

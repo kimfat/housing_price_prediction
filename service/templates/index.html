@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Калькулятор стоимости квартиры</title>
+</head>
+<body>
+    <h1>Введите площадь квартиры (в квадратных метрах):</h1>
+    <form method="post">
+        <input type="number" step="0.1" name="square_meters" required>
+        <button type="submit">Рассчитать</button>
+    </form>
+
+    {% if result %}
+        <h2>Стоимость квартиры: {{ result | round(2) }} руб.</h2>
+    {% endif %}
+
+    {% if error %}
+        <p style="color:red;">Ошибка: {{ error }}</p>
+    {% endif %}
+</body>
+</html>
+    
