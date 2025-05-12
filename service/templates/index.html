@@ -11,7 +11,7 @@
     </form>
 
     {% if result %}
-        <h2>Стоимость квартиры: {{ result | round(2) }} руб.</h2>
+        <h2>Стоимость квартиры: {{ result }}</h2>
     {% endif %}
 
     {% if error %}
@@ -19,4 +19,3 @@
     {% endif %}
 </body>
 </html>
-    
