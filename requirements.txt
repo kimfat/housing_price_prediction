@@ -1,3 +1,7 @@
 cianparser
 pandas
 flask
+scikit-learn
+xgboost
+logging
+argparse

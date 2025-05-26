@@ -4,10 +4,29 @@
     <title>Калькулятор стоимости квартиры</title>
 </head>
 <body>
-    <h1>Введите площадь квартиры (в квадратных метрах):</h1>
+    <h1>Введите параметры квартиры:</h1>
     <form method="post">
-        <input type="number" step="0.1" name="square_meters" required>
-        <button type="submit">Рассчитать</button>
+        <label>Этаж:</label>
+        <input type="number" name="floor" value="{{ floor or '' }}" required min="1"><br><br>
+
+        <label>Всего этажей в доме:</label>
+        <input type="number" name="floors_count" value="{{ floors_count or '' }}" required min="1"><br><br>
+
+        <label>Количество комнат:</label>
+        <input type="number" name="rooms_count" value="{{ rooms_count or '' }}" required min="1"><br><br>
+
+        <label>Общая площадь (кв. м):</label>
+        <input type="number" step="0.1" name="total_meters" value="{{ total_meters or '' }}" required min="0.1"><br><br>
+
+        <label>Тип автора объявления:</label>
+        <select name="author_type" required>
+            <option value="" disabled {% if not author_type %}selected{% endif %}>Выберите...</option>
+            <option value="агент по недвижимости" {% if author_type == 'агент по недвижимости' %}selected{% endif %}>Агент по недвижимости</option>
+            <option value="риэлтор" {% if author_type == 'риэлтор' %}selected{% endif %}>Риэлтор</option>
+            <option value="домовладелец" {% if author_type == 'домовладелец' %}selected{% endif %}>Домовладелец</option>
+        </select><br><br>
+
+        <button type="submit">Рассчитать стоимость</button>
     </form>
 
     {% if result %}
