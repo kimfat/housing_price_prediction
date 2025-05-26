@@ -142,7 +142,7 @@ def main():
     Main function to execute full pipeline via CLI.
     """
     parser = argparse.ArgumentParser(description="Run ML pipeline.")
-    parser.add_argument("--model_name", type=str, required=True, help="Name of the model to save (e.g., model.pkl)")
+    parser.add_argument("--model_name", type=str, required=True, help="Name of the model to save (e.g., linear_regression.pkl)")
     parser.add_argument("--test_size", type=float, default=0.2, help="Test set size (0.1 - 0.5)")
     parser.add_argument("--ready_raw_data", type=str, default=None, help="Name of already parsed raw data (e.g., raw_2025-05-19_20-58.csv)")
 
