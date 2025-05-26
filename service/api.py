@@ -12,7 +12,7 @@ logging.basicConfig(
 )
 
 # Загрузка модели
-model_path = './models/model.pkl'
+model_path = './models/xgbregressor.pkl'
 with open(model_path, 'rb') as f:
     model = joblib.load(f)
 
@@ -54,7 +54,9 @@ def index():
 
             author_type_num = AUTHOR_TYPE_MAP[author_type_raw]
 
-            features = np.array([[floor, floors_count, rooms_count, total_meters, author_type_num]])
+            first_floor = 1 if floor == 1 else 0
+            last_floor = 1 if floor == floors_count else 0
+            features = np.array([[floor, floors_count, rooms_count, total_meters, author_type_num, first_floor, last_floor]])
             predicted_price = model.predict(features)[0]
 
             formatted_price = format_price(predicted_price)

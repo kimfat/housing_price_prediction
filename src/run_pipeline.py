@@ -10,6 +10,7 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 import numpy as np
+from xgboost import XGBRegressor
 
 
 # Настройка логирования
@@ -105,6 +106,9 @@ def train_and_evaluate(csv_path: str, model_name: str, test_size: float) -> None
         raise ValueError("Missing 'url_id' column to sort data.")
 
     df.sort_values(by='id', inplace=True)  # Use id to sort chronologically
+        # Добавляем признаки первого и последнего этажа
+    df['first_floor'] = df['floor'] == 1
+    df['last_floor'] = df['floor'] == df['floors_count']
     df = df.drop(columns=['id'])
 
     y = df['price']
@@ -114,7 +118,7 @@ def train_and_evaluate(csv_path: str, model_name: str, test_size: float) -> None
     X_train, X_test = X.iloc[:split_index], X.iloc[split_index:]
     y_train, y_test = y.iloc[:split_index], y.iloc[split_index:]
 
-    model = LinearRegression()
+    model = XGBRegressor(random_state=42)
     model.fit(X_train, y_train)
     y_pred = model.predict(X_test)
 
@@ -128,7 +132,6 @@ def train_and_evaluate(csv_path: str, model_name: str, test_size: float) -> None
     logging.info(f"MAE: {mae:.2f}")
     logging.info(f"R2: {r2:.2f}")
     logging.info(f"RMSE: {rmse:.2f}")
-    logging.info(f"Model coefficients: {model.coef_}")
     logging.info(f"Sample predictions: {y_pred[:5]}")
 
     os.makedirs('models', exist_ok=True)
@@ -142,7 +145,7 @@ def main():
     Main function to execute full pipeline via CLI.
     """
     parser = argparse.ArgumentParser(description="Run ML pipeline.")
-    parser.add_argument("--model_name", type=str, required=True, help="Name of the model to save (e.g., linear_regression.pkl)")
+    parser.add_argument("--model_name", type=str, required=True, help="Name of the model to save (e.g., xgbregressor.pkl)")
     parser.add_argument("--test_size", type=float, default=0.2, help="Test set size (0.1 - 0.5)")
     parser.add_argument("--ready_raw_data", type=str, default=None, help="Name of already parsed raw data (e.g., raw_2025-05-19_20-58.csv)")
 
