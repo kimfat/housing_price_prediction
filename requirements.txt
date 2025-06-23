@@ -5,3 +5,5 @@ scikit-learn
 xgboost
 logging
 argparse
+flask-cors
+flask-httpauth

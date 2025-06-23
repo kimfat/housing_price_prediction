@@ -1,0 +1,9 @@
+stages:
+  preprocess:
+    cmd: python .\src\preprocess_data.py
+    deps:
+    - .\src\preprocess_data.py
+  train:
+    cmd: python .\src\train_and_evaluate.py
+    deps:
+    - .\src\train_and_evaluate.py

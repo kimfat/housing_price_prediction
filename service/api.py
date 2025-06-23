@@ -2,8 +2,33 @@ from flask import Flask, request, render_template
 import logging
 import joblib
 import numpy as np
+from flask_cors import CORS
+from flask_httpauth import HTTPTokenAuth
 
 app = Flask(__name__)
+
+CORS(app)
+auth = HTTPTokenAuth(scheme='Bearer')
+
+def load_tokens(filename='tokens.txt'):
+    try:
+        with open(filename, 'r') as f:
+            tokens = {line.strip() for line in f if line.strip()}
+        return tokens
+    except FileNotFoundError:
+        print(f"Файл {filename} с токенами не найден!")
+        return set()
+
+VALID_TOKENS = load_tokens('tokens.txt')
+
+@auth.verify_token
+def verify_token(token):
+    if token in VALID_TOKENS:
+        return token
+    token_param = request.args.get('token', None)
+    if token_param in VALID_TOKENS:
+        return token_param
+    return None
 
 logging.basicConfig(
     filename='logs/log.txt',
@@ -11,7 +36,6 @@ logging.basicConfig(
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
 
-# Загрузка модели
 model_path = './models/model.pkl'
 with open(model_path, 'rb') as f:
     model = joblib.load(f)
@@ -29,7 +53,6 @@ def format_price(price):
     
     return ' '.join(parts) if parts else "менее тысячи рублей"
 
-# Маппинг author_type из формы в числовой код для модели
 AUTHOR_TYPE_MAP = {
     'агент по недвижимости': 3,
     'риэлтор': 4,
@@ -37,6 +60,7 @@ AUTHOR_TYPE_MAP = {
 }
 
 @app.route('/', methods=['GET', 'POST'])
+@auth.login_required
 def index():
     if request.method == 'POST':
         try:
@@ -59,7 +83,7 @@ def index():
 
             formatted_price = format_price(predicted_price)
 
-            logging.info(f"Предсказание цены: floor={floor}, floors_count={floors_count}, roomss_count={rooms_count}, total_meters={total_meters}, author_type={author_type_raw} ({author_type_num}) → {predicted_price} руб. ({formatted_price})")
+            logging.info(f"Предсказание цены: floor={floor}, floors_count={floors_count}, rooms_count={rooms_count}, total_meters={total_meters}, author_type={author_type_raw} ({author_type_num}) → {predicted_price} руб. ({formatted_price})")
 
             return render_template('index.html', result=formatted_price,
                                    floor=floor, floors_count=floors_count, rooms_count=rooms_count,
@@ -74,7 +98,7 @@ def index():
             return render_template('index.html', error="Внутренняя ошибка сервера.")
 
     return render_template('index.html')
-    
+
 
 if __name__ == '__main__':
     app.run(debug=True)
